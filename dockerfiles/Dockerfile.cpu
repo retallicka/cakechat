@@ -43,3 +43,7 @@ RUN mkdir -p /root/cakechat/data/tensorboard
 WORKDIR /root/cakechat
 CMD (tensorboard --logdir=data/tensorboard 2>data/tensorboard/err.log &); \
     /bin/bash
+
+ADD start.sh /root/cakechat/start.sh 
+
+CMD ["sh", "start.sh"]
